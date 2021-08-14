@@ -1,5 +1,33 @@
 .page-footer {
   background-color: @gray-basic;
+  padding: 0 @mobile-padding;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+
+  @media (min-width: @tablet) {
+    padding: 0 @tablet-padding;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 @desktop-padding;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+  }
+}
+
+
+.page-footer__credentials {
+  display: flex;
+  align-items: center;
 }
 
 .page-footer__credentials-label {

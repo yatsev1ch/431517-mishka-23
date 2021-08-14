@@ -1,15 +1,44 @@
 .products-for-home {
   background-color: @gray-products;
+  display: grid;
+  align-items: start;
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  min-height: 506px;
+  padding-top: 90px;
+  box-sizing: border-box;
+}
+
+.products-for-home__image {
+  position: absolute;
 }
 
 .products-for-home__header {
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
+  padding: 0 @mobile-padding;
+  margin: 0;
+  text-align: center;
+
+  grid-column: ~"1 / -1";
+  z-index: 1;
+
+  @media (min-width: @tablet) {
+    padding: 0 @tablet-padding;
+  }
 }
 
 .products-for-home__categories-list {
   .reset-list();
+  z-index: 1;
+  grid-column: ~"1 / -1";
+  align-self: end;
+
+  @media (min-width: @tablet) {
+    padding: 0 @tablet-padding;
+  }
 }
 
 .products-for-home__category-link {
@@ -26,5 +55,12 @@
 
   &--toys {
     background-color: @mint-dark;
+  }
+
+  padding: 0 @mobile-padding;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet) {
+    padding: 0;
   }
 }

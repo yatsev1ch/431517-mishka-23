@@ -1,7 +1,34 @@
+.week-product {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 @mobile-padding;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 @tablet-padding;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: repeat(6, 1fr);
+    padding: 0 @desktop-padding;
+  }
+}
+
 .week-product__header-title {
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
+  margin: 0;
+  grid-row: ~"1 / 2";
+
+  @media (min-width: @tablet) {
+    grid-column: ~"1 / 4";
+  }
+
+  @media (min-width: @desktop) {
+    grid-column: ~"2 / 7";
+    z-index: 1;
+  }
 }
 
 .week-product__header-label {
@@ -9,10 +36,40 @@
   line-height: 30px;
   font-weight: 700;
   color: @mint-light;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    grid-row: ~"1 / 2";
+    grid-column: ~"4 / 5";
+  }
+
+  @media (min-width: @desktop) {
+    grid-column: ~"1 / 2";
+  }
 }
 
 .week-product__description {
   color: @black-light;
+
+  @media (min-width: @tablet) {
+    grid-row: ~"2 / 3";
+    grid-column: ~"1 / 3";
+  }
+
+  @media (min-width: @desktop) {
+    grid-column: ~"2 / 4";
+  }
+}
+
+.week-product__properties {
+  @media (min-width: @tablet) {
+    grid-row: ~"3 / 4";
+    grid-column: ~"1 / 3";
+  }
+
+  @media (min-width: @desktop) {
+    grid-column: ~"2 / 4";
+  }
 }
 
 .week-product__property-name {
@@ -28,4 +85,41 @@
 .week-product__price {
   font-size: 17px;
   color: @black-light;
+
+  @media (min-width: @tablet) {
+    grid-row: ~"4 / 5";
+    grid-column: ~"1 / 3";
+  }
+
+  @media (min-width: @desktop) {
+    grid-column: ~"2 / 4";
+  }
+}
+
+.week-product__button {
+  @media (min-width: @tablet) {
+    grid-row: ~"5 / 6";
+    grid-column: ~"1 / 3";
+  }
+
+  @media (min-width: @desktop) {
+    grid-row: ~"5 / 6";
+    grid-column: ~"2 / 4";
+  }
+}
+
+.week-product__image {
+  @media (min-width: @tablet) {
+    grid-row: ~"2 / 6";
+    grid-column: ~"3 / 5";
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: @desktop) {
+    grid-row: ~"1 / 6";
+    grid-column: ~"4 / 7";
+    width: 100%;
+    height: auto;
+  }
 }
