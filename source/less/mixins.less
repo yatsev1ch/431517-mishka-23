@@ -1,9 +1,3 @@
-.reset-list() {
-  list-style: none;
-  .reset-margins-n-paddings();
-}
-
-
 .reset-margins-n-paddings() {
   margin: 0;
   padding: 0;
@@ -14,4 +8,19 @@
   font-size: 0;
   background-color: transparent;
   border: none;
+}
+
+
+.set-as-container() {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: @mobile;
+
+  @media (min-width: @tablet) {
+    width: @tablet;
+  }
+
+  @media (min-width: @desktop) {
+    width: @desktop;
+  }
 }

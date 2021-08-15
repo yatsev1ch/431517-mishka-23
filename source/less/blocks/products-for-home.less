@@ -1,10 +1,13 @@
 .products-for-home {
+  position: relative;
   background-color: @gray-products;
+}
+
+.products-for-home__container {
   display: grid;
   align-items: start;
-  position: relative;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content;
+  grid-template-rows: max-content;
   min-height: 506px;
   padding-top: 90px;
   box-sizing: border-box;
@@ -12,6 +15,9 @@
 
 .products-for-home__image {
   position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .products-for-home__header {
@@ -31,7 +37,7 @@
 }
 
 .products-for-home__categories-list {
-  .reset-list();
+  .reset-margins-n-paddings();
   z-index: 1;
   grid-column: ~"1 / -1";
   align-self: end;
@@ -48,6 +54,8 @@
   font-size: 20px;
   line-height: 30px;
   font-weight: 700;
+  padding: 0 @mobile-padding;
+  box-sizing: border-box;
 
   &--interior {
     background-color: @mint-light;
@@ -56,9 +64,6 @@
   &--toys {
     background-color: @mint-dark;
   }
-
-  padding: 0 @mobile-padding;
-  box-sizing: border-box;
 
   @media (min-width: @tablet) {
     padding: 0;

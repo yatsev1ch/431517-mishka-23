@@ -1,12 +1,16 @@
 .reviews {
+  @media (min-width: @tablet) {
+    background-image: url("/../img/reviews-background.jpg");
+    background-repeat: no-repeat;
+  }
+}
+
+.reviews__container {
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 @mobile-padding;
 
   @media (min-width: @tablet) {
-    background-image: url("../../../img/reviews-background.jpg");
-    background-repeat: no-repeat;
-
     grid-template-columns: repeat(4, 1fr);
     padding: 0 @tablet-padding;
   }

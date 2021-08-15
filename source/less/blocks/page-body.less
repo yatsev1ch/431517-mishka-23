@@ -1,7 +1,5 @@
 .page-body {
   min-height: 100%;
-  width: @mobile;
-
   font-family: "Opensans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -10,11 +8,21 @@
   background-color: @white-basic;
   .reset-margins-n-paddings();
 
-  @media (min-width: @tablet) {
-    width: @tablet;
-  }
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
 
-  @media (min-width: @desktop) {
-    width: @desktop;
-  }
+.page-body ul {
+  list-style: none;
+}
+
+.page-body img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-body *::before,
+.page-body *::after {
+  display: block;
+  box-sizing: border-box;
 }
