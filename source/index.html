@@ -8,11 +8,13 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <div class="page-header__container container">
-        <a href="" class="page-header__site-logo">
-          <img class="page-header__site-logo-image" src="img/mishka-logo-mobile.svg" alt="логотип магазина Мишка" width="86" height="35">
-        </a>
-        <button class="page-header__menu-toggle page-header__menu-toggle" type="button">Открыть меню</button>
+      <div class="page-header__container">
+        <div class="page-header__logo-container">
+          <a href="" class="page-header__site-logo">
+            <img class="page-header__site-logo-image" src="img/mishka-logo-mobile.svg" alt="логотип магазина Мишка" width="86" height="35">
+          </a>
+          <button class="page-header__menu-toggle page-header__menu-toggle" type="button">Открыть меню</button>
+        </div>
         <div class="page-header__main-menu-container">
           <nav class="page-header__site-navigation">
             <ul class="page-header__site-navigation-list">
@@ -45,16 +47,17 @@
         <div class="products-for-home__container container">
           <h1 class="products-for-home__header">Милые штуки ручной работы для дома</h1>
           <img class="products-for-home__image" src="img/products-for-home.png" height="373" width="320" alt="Полка в виде домика с игрушками и изделиями ручной работы на ней">
-          <ul class="products-for-home__categories-list">
-            <li class="products-for-home__categories-item">
-              <a href="#" class="products-for-home__category-link products-for-home__category-link--interior">Предметы интерьера</a>
-            </li>
-            <li class="products-for-home__categories-item">
-              <a href="#" class="products-for-home__category-link products-for-home__category-link--toys">Детские игрушки</a>
-            </li>
-          </ul>
         </div>
+        <ul class="products-for-home__categories-list">
+          <li class="products-for-home__categories-item">
+            <a href="#" class="products-for-home__category-link products-for-home__category-link--interior">Предметы интерьера</a>
+          </li>
+          <li class="products-for-home__categories-item">
+            <a href="#" class="products-for-home__category-link products-for-home__category-link--toys">Детские игрушки</a>
+          </li>
+        </ul>
       </section>
+      <article class="week-product">
         <div class="week-product__container container">
           <h2 class="week-product__header-label">Товар недели</h2>
           <h3 class="week-product__header-title">Вязанные корзинки</h3>
@@ -79,19 +82,16 @@
         </div>
       </article>
 
-
-      <section class="about">
-        <div class="about__container container">
-          <h2 class="about__header">Коротко о нас:</h2>
-          <ul class="about__list">
-            <li class="about__item"><p class="about__item-description">Экологически чистые материалы</p></li>
-            <li class="about__item"><p class="about__item-description">Скандинавский стиль по российской цене</p></li>
-            <li class="about__item"><p class="about__item-description">Увеличивает лайкина фотографиях</p></li>
-            <li class="about__item"><p class="about__item-description">Связано вручную с любовью и умилением</p></li>
-            <li class="about__item"><p class="about__item-description">Поддержка отечественного производителя</p></li>
-            <li class="about__item"><p class="about__item-description">Поставляется в подарочной упаковке</p></li>
-          </ul>
-        </div>
+      <section class="about container">
+        <h2 class="about__header">Коротко о нас:</h2>
+        <ul class="about__list">
+          <li class="about__item"><p class="about__item-description">Экологически чистые материалы</p></li>
+          <li class="about__item"><p class="about__item-description">Скандинавский стиль по российской цене</p></li>
+          <li class="about__item"><p class="about__item-description">Увеличивает лайкина фотографиях</p></li>
+          <li class="about__item"><p class="about__item-description">Связано вручную с любовью и умилением</p></li>
+          <li class="about__item"><p class="about__item-description">Поддержка отечественного производителя</p></li>
+          <li class="about__item"><p class="about__item-description">Поставляется в подарочной упаковке</p></li>
+        </ul>
       </section>
       <section class="reviews">
         <div class="reviews__container container">

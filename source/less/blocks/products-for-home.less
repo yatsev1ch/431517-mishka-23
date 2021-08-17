@@ -1,16 +1,15 @@
 .products-for-home {
-  position: relative;
   background-color: @gray-products;
+  min-height: 506px;
+  display: flex;
+  flex-direction: column;
 }
 
 .products-for-home__container {
-  display: grid;
-  align-items: start;
-  grid-template-columns: 1fr;
-  grid-template-rows: max-content;
-  min-height: 506px;
   padding-top: 90px;
   box-sizing: border-box;
+  position: relative;
+  flex-grow: 1;
 }
 
 .products-for-home__image {
@@ -24,26 +23,17 @@
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
-  padding: 0 @mobile-padding;
   margin: 0;
   text-align: center;
-
-  grid-column: ~"1 / -1";
   z-index: 1;
-
-  @media (min-width: @tablet) {
-    padding: 0 @tablet-padding;
-  }
+  position: relative;
 }
 
 .products-for-home__categories-list {
   .reset-margins-n-paddings();
-  z-index: 1;
-  grid-column: ~"1 / -1";
-  align-self: end;
 
   @media (min-width: @tablet) {
-    padding: 0 @tablet-padding;
+    .set-as-container();
   }
 }
 
@@ -54,7 +44,6 @@
   font-size: 20px;
   line-height: 30px;
   font-weight: 700;
-  padding: 0 @mobile-padding;
   box-sizing: border-box;
 
   &--interior {

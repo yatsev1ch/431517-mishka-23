@@ -5,22 +5,13 @@
     .set-as-container();
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: max-content;
-    padding: 0 @desktop-padding;
   }
 }
 
 .contacts__button-wrapper,
 .contacts__content-wrapper {
-  padding: 0 @mobile-padding;
-
-  @media (min-width: @tablet) {
-    padding: 0 @tablet-padding;
-  }
-
   @media (min-width: @desktop) {
-    padding: 0;
-    margin: 0;
-    width: auto;
+    .reset-container();
     align-self: start;
     grid-column: ~"2 / 4";
     grid-row: ~"1 / 2";
