@@ -1,11 +1,45 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
 .about__header {
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
+
+  @media (min-width: @desktop) {
+    grid-column: ~"2 / 7";
+  }
 }
 
 .about__list {
-  .reset-list();
+  .reset-margins-n-paddings();
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet) {
+    grid-column: ~"1 / 3";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column: ~"2 / 7";
+  }
+}
+
+.about__item {
+  @media (min-width: @tablet) {
+    flex-basis: 50%;
+  }
 }
 
 .about__item-description {

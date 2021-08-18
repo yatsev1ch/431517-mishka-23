@@ -2,6 +2,31 @@
   background-color: @gray-basic;
 }
 
+.page-footer__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+  }
+}
+
+
+.page-footer__credentials {
+  display: flex;
+  align-items: center;
+}
+
 .page-footer__credentials-label {
   font-size: 19px;
   line-height: 18px;

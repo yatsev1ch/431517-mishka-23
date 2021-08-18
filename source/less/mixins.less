@@ -1,15 +1,45 @@
-.reset-list() {
-  list-style: none;
-  .reset-margins-n-paddings();
-}
-
-
 .reset-margins-n-paddings() {
   margin: 0;
   padding: 0;
 }
 
-.clear-button-text() {
+.clear-button() {
   color: transparent;
   font-size: 0;
+  background-color: transparent;
+  border: none;
+}
+
+
+.set-as-container() {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: @mobile;
+  padding: 0 @mobile-padding;
+
+  @media (min-width: @tablet) {
+    width: @tablet;
+    padding: 0 @tablet-padding;
+  }
+
+  @media (min-width: @desktop) {
+    width: @desktop;
+    padding: 0 @desktop-padding;
+  }
+}
+
+.reset-container() {
+  margin: 0;
+  width: auto;
+  padding: 0;
+
+  @media (min-width: @tablet) {
+    width: auto;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop) {
+    width: auto;
+    padding: 0;
+  }
 }

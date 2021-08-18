@@ -1,6 +1,5 @@
 .page-body {
   min-height: 100%;
-  min-width: 320px;
   font-family: "Opensans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -8,4 +7,22 @@
   color: @black-basic;
   background-color: @white-basic;
   .reset-margins-n-paddings();
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.page-body ul {
+  list-style: none;
+}
+
+.page-body img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-body *::before,
+.page-body *::after {
+  display: block;
+  box-sizing: border-box;
 }
