@@ -1,9 +1,36 @@
 .inner-header-container {
   background-color: @gray-basic;
+  min-height: 177px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+
+  @media (min-width: @tablet) {
+    padding-top: 100px;
+    min-height: 238px;
+  }
+
+  @media (min-width: @desktop) {
+    min-height: 272px;
+  }
 }
 
 .inner-header-container__header {
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
+  text-align: center;
+
+  margin: auto;
+  max-width: @mobile - (2 * @mobile-padding);
+
+  @media (min-width: @tablet) {
+    max-width: @tablet - 2 * @tablet-padding;
+    margin: 0 auto auto auto;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: @desktop - 2 * @desktop-padding;
+  }
 }
