@@ -194,7 +194,7 @@
 
   @media (min-width: @desktop) {
     font-size: 17px;
-    padding-top: 34px;
+    padding-top: 33px;
     padding-bottom: 31px;
     margin-right: 35px;
   }
@@ -215,15 +215,14 @@
       font-size: 0;
       color: transparent;
       position: relative;
-      min-height: @header-tablet-height;
-      height: 100%;
+      min-height: @header-tablet-height + 1px;
       width: 85px;
       border-left: 1px solid @black-transparent-10;
       border-right: 1px solid @black-transparent-10;
     }
 
     @media (min-width: @desktop) {
-      width: 86px;
+      min-height: @header-desktop-height + 1px;
     }
 
     &::before {
@@ -247,12 +246,12 @@
 
   &--cart {
     @media (min-width: @tablet) {
-      padding: 35px 0 30px 83px;
+      padding: 33px 0 31px 83px;
       max-width: 265px;
     }
 
     @media (min-width: @desktop) {
-      padding: 34px 0 31px 83px;
+      // padding: 34px 0 31px 83px;
       width: 266px;
     }
 
