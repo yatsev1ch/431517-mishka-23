@@ -1,5 +1,6 @@
 .products-for-home {
   background-color: @gray-products;
+  position: relative;
   display: flex;
   flex-direction: column;
   background-image: url("../img/products-for-home/mobile.png");
@@ -13,6 +14,24 @@
   @media (min-width: @desktop) {
     background-image: url("../img/products-for-home/desktop.png");
     margin-bottom: 20px;
+  }
+
+  &::before {
+    @media (min-width: @tablet) {
+      content: "";
+      position: absolute;
+      background-image: url("../img/wave-pattern-white.svg");
+      height: 24px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    @media (min-width: @desktop) {
+      height: 34px;
+      background-size: contain;
+    }
   }
 }
 
@@ -86,7 +105,11 @@
     .reset-container();
     font-size: 20px;
     line-height: 30px;
-    padding: 23px 94px 21px 35px;
+    padding: 25px 94px 45px 35px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 25px 94px 48px 35px;
   }
 
   &--interior::before {
@@ -98,12 +121,16 @@
     margin: auto 0;
     width: 40px;
     height: 62px;
-    background-color: @gray-test;
+    background-image: url("../img/icons/interior-icon.svg");
 
     @media (min-width: @tablet) {
       right: 36px;
-      top: 17px;
+      bottom: 8px;
       width: 41px;
+    }
+
+    @media (min-width: @desktop) {
+      bottom: 14px;
     }
   }
 
@@ -116,13 +143,17 @@
     margin: auto 0;
     width: 60px;
     height: 60px;
-    background-color: @gray-test;
+    background-image: url("../img/icons/toy-icon.svg");
 
     @media (min-width: @tablet) {
       right: 34px;
-      top: 17px;
+      bottom: 8px;
       width: 61px;
       height: 61px;
+    }
+
+    @media (min-width: @desktop) {
+      bottom: 14px;
     }
   }
 }

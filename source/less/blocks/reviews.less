@@ -1,40 +1,65 @@
 .reviews {
+  position: relative;
+
   @media (min-width: @tablet) {
     background-image: url("../img/reviews-background.jpg");
     background-repeat: no-repeat;
-    background-size: 46% 100%;
+    background-size: 350px 457px;
     box-sizing: border-box;
     padding-bottom: 5px;
-    margin-bottom: 85px;
   }
 
   @media (min-width: @desktop) {
     background-image: none;
+    padding-bottom: 70px;
   }
 }
 
 .reviews__container {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 7px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url("../img/wave-pattern-gray.svg");
+    background-size: cover;
+
+    @media (min-width: @tablet) {
+      height: 17px;
+    }
+
+    @media (min-width: @desktop) {
+      height: 23px;
+      right: @desktop-padding;
+      left: @desktop-padding;
+    }
+  }
 
   @media (min-width: @tablet) {
-    padding-top: 78px;
-    margin-bottom: 41px;
+    padding-top: 79px;
+    padding-bottom: 131px;
+    margin-bottom: 0;
 
     grid-template-columns: repeat(4, 1fr);
   }
 
   @media (min-width: @desktop) {
     @background-width: (@desktop - (2 * @desktop-padding)) / 3;
+    position: relative;
+
     padding-top: 78px;
-    padding-bottom: 95px;
-    margin-bottom: 70px;
+    padding-bottom: 185px;
 
     background-image: url("../img/reviews-background.jpg");
-    background-position: @desktop-padding 100%;
+    background-position: @desktop-padding 0;
     background-repeat: no-repeat;
-    background-size: @background-width 100%;
+    background-size: @background-width 457px;
 
     grid-template-columns: repeat(6, 1fr);
   }
@@ -90,7 +115,7 @@
 
 .reviews__slider-controls {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   grid-column: ~"-1 / -2";
   grid-row: ~"1 / 2";
@@ -99,8 +124,12 @@
 
   @media (min-width: @tablet) {
     margin: 0;
-    width: 170px;
-    margin-right: 4px;
+    width: 173px;
+    margin-right: 1px;
+    margin-bottom: 2px;
+  }
+
+  @media (min-width: @desktop) {
     margin-bottom: 4px;
   }
 
@@ -118,22 +147,31 @@
 
 .reviews__slider-button {
   .clear-button();
-  height: 50px;
-  background-color: @green-test;
+  height: 52px;
   border: 1px solid @gray-border;
+  border-left: none;
   flex-basis: 50%;
 
   @media (min-width: @tablet) {
-    border: none;
+    height: 50px;
   }
 
   &--prev {
-    border-right: none;
+    background-image: url("../img/icons/arrow-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
   }
 
   &--next {
-    border-left: none;
     order: 2;
+    background-image: url("../img/icons/arrow-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: @tablet) {
+    border: none;
   }
 }
 

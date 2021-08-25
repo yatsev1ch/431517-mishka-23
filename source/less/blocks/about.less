@@ -11,7 +11,7 @@
   }
 
   @media (min-width: @desktop) {
-    padding-top: 90px;
+    padding-top: 68px;
     margin-bottom: 39px;
 
     grid-template-columns: repeat(6, 1fr);
@@ -28,7 +28,7 @@
   @media (min-width: @tablet) {
     font-size: @h-font-size-tablet;
     line-height: @h-line-height-tablet;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: @desktop) {
@@ -85,22 +85,28 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: @mint-light;
+
+    @media (min-width: @tablet) {
+      top: 4px;
+    }
   }
 
   &--flower::before {
     width: 33px;
     height: 38px;
+    background-image: url("../img/icons/flower-icon.svg");
   }
 
   &--money::before {
     width: 47px;
     height: 27px;
+    background-image: url("../img/icons/money-icon.svg");
   }
 
   &--heart::before {
     width: 34px;
     height: 27px;
+    background-image: url("../img/icons/heart-icon.svg");
   }
 
   &--ball {
@@ -113,6 +119,7 @@
   &--ball::before {
     width: 35px;
     height: 34px;
+    background-image: url("../img/icons/ball-icon.svg");
   }
 
   &--rocket {
@@ -125,10 +132,12 @@
   &--rocket::before {
     width: 55px;
     height: 23px;
+    background-image: url("../img/icons/rocket-icon.svg");
   }
 
   &--gift::before {
     width: 33px;
     height: 32px;
+    background-image: url("../img/icons/gift-icon.svg");
   }
 }

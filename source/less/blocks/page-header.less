@@ -1,5 +1,6 @@
 .page-header {
   border-top: 1px solid @gray-border;
+  z-index: 1;
 
   @media (min-width: @tablet) {
     border-top: none;
@@ -223,6 +224,7 @@
 
     @media (min-width: @desktop) {
       min-height: @header-desktop-height + 1px;
+      width: 84px;
     }
 
     &::before {
@@ -245,14 +247,16 @@
   }
 
   &--cart {
+    box-sizing: border-box;
+
     @media (min-width: @tablet) {
       padding: 33px 0 31px 83px;
-      max-width: 265px;
+      min-width: 265px;
     }
 
     @media (min-width: @desktop) {
-      // padding: 34px 0 31px 83px;
-      width: 266px;
+      padding: 33px 0 31px 85px;
+      min-width: 267px;
     }
 
     &::before {
@@ -319,7 +323,7 @@
     height: -@pfh-desktop-padding;
     overflow-y: auto;
 
-    padding-top: 19px;
+    padding-top: 21px;
 
     display: flex;
     flex-wrap: wrap;
@@ -358,6 +362,7 @@
 
   @media (min-width: @desktop) {
     height: @pfh-desktop-padding;
+    padding-top: 21px;
 
     grid-column: ~"3 / 4";
   }
