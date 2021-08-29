@@ -12,13 +12,14 @@
   @media (min-width: @desktop) {
     .set-as-container();
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: max-content;
+    grid-template-rows: auto 1fr;
     margin-bottom: 50px;
   }
 
   &::before {
     content: "";
     background-image: url("../img/icons/flag-icon.svg");
+    background-repeat: no-repeat;
     display: none;
 
     @media (min-width: @tablet) {
@@ -141,6 +142,7 @@
   margin-bottom: 43px;
   width: 100%;
   background-image: url("../img/map-image.png");
+  background-repeat: no-repeat;
   height: 454px;
 
   @media (min-width: @tablet) {

@@ -28,6 +28,7 @@
     left: 0;
     bottom: 0;
     background-image: url("../img/wave-pattern-gray.svg");
+    background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-width: @tablet) {
@@ -147,6 +148,7 @@
 
 .reviews__slider-button {
   .clear-button();
+  cursor: pointer;
   height: 52px;
   border: 1px solid @gray-border;
   border-left: none;
@@ -154,6 +156,7 @@
 
   @media (min-width: @tablet) {
     height: 50px;
+    border: none;
   }
 
   &--prev {
@@ -168,10 +171,6 @@
     background-image: url("../img/icons/arrow-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
-  }
-
-  @media (min-width: @tablet) {
-    border: none;
   }
 }
 

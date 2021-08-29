@@ -25,6 +25,23 @@
   }
 }
 
+.page-footer__logo-image {
+  width: 102px;
+  height: 34px;
+  fill: @black-basic;
+
+  &:hover,
+  &:focus {
+    fill: @mint-link;
+  }
+
+  &:active {
+    fill: @mint-link;
+    opacity: 0.3;
+  }
+}
+
+
 .page-footer__social-links-container {
   align-self: center;
   justify-self: stretch;
@@ -49,11 +66,27 @@
   font-size: 0;
   width: 25px;
   height: 28px;
-  background-color: @gray-test;
   margin-right: 35px;
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.page-footer__social-icon {
+  display: block;
+  height: 28px;
+  width: 23px;
+  fill: @black-basic;
+
+  &:hover,
+  &:focus {
+    fill: @mint-link;
+  }
+
+  &:active {
+    fill: @mint-link;
+    opacity: 0.3;
   }
 }
 
@@ -82,5 +115,26 @@
 
   @media (min-width: @desktop) {
     margin-right: 30px;
+  }
+}
+
+.page-footer__credentials-logo-link {
+  display: block;
+}
+
+.page-footer__credentials-logo {
+  width: 27px;
+  height: 34px;
+  display: block;
+  fill: @mint-light;
+
+  &:hover,
+  &:focus {
+    fill: @mint-link;
+  }
+
+  &:active {
+    fill: @mint-link;
+    opacity: 0.3;
   }
 }

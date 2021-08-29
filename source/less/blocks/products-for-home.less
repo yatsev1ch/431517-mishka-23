@@ -21,6 +21,7 @@
       content: "";
       position: absolute;
       background-image: url("../img/wave-pattern-white.svg");
+      background-repeat: repeat;
       height: 24px;
       bottom: 0;
       left: 0;
@@ -77,12 +78,35 @@
 .products-for-home__categories-link-container {
   flex-basis: 100%;
 
+  &:hover,
+  &:focus {
+    @media (min-width: @tablet) {
+      margin-top: -5px;
+    }
+  }
+
   &--interior {
     background-color: @mint-light;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @mint-light-hover;
+    }
+
+    &:active {
+      background-color: @mint-light-hover;
+    }
   }
 
   &--toys {
     background-color: @mint-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @mint-link;
+    }
   }
 }
 
@@ -112,48 +136,62 @@
     padding: 25px 94px 48px 35px;
   }
 
-  &--interior::before {
+  &:hover,
+  &:focus {
+    @media (min-width: @tablet) {
+      padding-bottom: 50px;
+    }
+
+    @media (min-width: @desktop) {
+      padding-bottom: 53px;
+    }
+  }
+
+  &::before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     right: @mobile-padding;
     margin: auto 0;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+    @media (min-width: @tablet) {
+      top: 30px;
+      bottom: initial;
+    }
+  }
+
+  &--interior::before {
     width: 40px;
     height: 62px;
     background-image: url("../img/icons/interior-icon.svg");
 
     @media (min-width: @tablet) {
       right: 36px;
-      bottom: 8px;
       width: 41px;
-    }
-
-    @media (min-width: @desktop) {
-      bottom: 14px;
     }
   }
 
   &--toys::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: @mobile-padding;
-    margin: auto 0;
     width: 60px;
     height: 60px;
     background-image: url("../img/icons/toy-icon.svg");
 
     @media (min-width: @tablet) {
       right: 34px;
-      bottom: 8px;
       width: 61px;
       height: 61px;
     }
+  }
 
-    @media (min-width: @desktop) {
-      bottom: 14px;
-    }
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 }

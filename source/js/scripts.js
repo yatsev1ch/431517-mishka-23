@@ -12,9 +12,6 @@ menuToggle.addEventListener("click", (evt) => {
     menuToggle.classList.add("page-header__menu-toggle--opened");
     menuContainer.classList.add("page-header__main-menu-container--opened");
   } else if (isOpened) {
-    // menuToggle.classList.remove("page-header__menu-toggle--opened");
-    // menuContainer.classList.remove("page-header__main-menu-container--opened");
-
     menuToggle.classList.remove("page-header__menu-toggle--opened");
     menuContainer.classList.remove("page-header__main-menu-container--opened");
     menuToggle.classList.add("page-header__menu-toggle--closed");

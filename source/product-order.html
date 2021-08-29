@@ -10,36 +10,52 @@
     <header class="page-header">
       <div class="page-header__container">
         <div class="page-header__logo-container">
-          <a href="index.html" class="page-header__site-logo">
-            <img class="page-header__site-logo-image" src="img/mishka-logo-mobile.svg" alt="логотип магазина Мишка" width="86" height="35">
+          <a href="index.html" class="page-header__logo-link">
+            <svg class="page-header__logo-image with-opacity-states" width="86" height="35">
+              <use class="page-header__logo-image--minimal" xlink:href="img/sprite.svg#minimal-logo"></use>
+              <use class="page-header__logo-image--medium" xlink:href="img/sprite.svg#medium-logo"></use>
+              <use class="page-header__logo-image--large" xlink:href="img/sprite.svg#large-logo"></use>
+            </svg>
           </a>
-          <button class="page-header__menu-toggle page-header__menu-toggle" type="button">Открыть меню</button>
+          <button class="page-header__menu-toggle page-header__menu-toggle--inactive" type="button">Открыть меню</button>
         </div>
-        <div class="page-header__main-menu-container">
+        <div class="page-header__main-menu-container page-header__main-menu-container--inactive">
           <nav class="page-header__site-navigation">
             <ul class="page-header__site-navigation-list">
               <li class="page-header__site-navigation-item">
-                <a class="page-header__site-navigation-link" href="catalog.html">Каталог товаров</a>
+                <a class="page-header__site-navigation-link with-opacity-states" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="page-header__site-navigation-item">
-                <a class="page-header__site-navigation-link" href="">Вязание на заказ</a>
+                <a class="page-header__site-navigation-link with-opacity-states" href="">Вязание на заказ</a>
               </li>
             </ul>
           </nav>
           <div class="page-header__user-buttons-container">
-            <a class="page-header__user-button page-header__user-button--search" href="#">Поиск по сайту</a>
-            <a class="page-header__user-button page-header__user-button--cart" href="#">Корзина: пока пуста</a>
+            <div class="page-header__user-button-container">
+              <a class="page-header__user-button page-header__user-button--search" href="#">Поиск по сайту
+                <svg class="page-header__user-button-icon page-header__user-button-icon--search" width="18" heigh="18">
+                  <use xlink:href="img/sprite.svg#search-icon"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="div page-header__user-button-container">
+              <a class="page-header__user-button page-header__user-button--cart" href="#">Корзина: пока пуста
+                <svg class="page-header__user-button-icon page-header__user-button-icon--cart" width="21" heigh="18" fill="inherit">
+                  <use xlink:href="img/sprite.svg#cart-icon"></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <ul class="page-header__additional-menu-container">
           <li class="page-header__additional-menu-item">
-            <a href="#" class="page-header__additional-menu-link">Новые поступления</a>
+            <a href="#" class="page-header__additional-menu-link with-opacity-states">Новые поступления</a>
           </li>
           <li class="page-header__additional-menu-item">
-            <a href="#" class="page-header__additional-menu-link">Распродажа</a>
+            <a href="#" class="page-header__additional-menu-link with-opacity-states">Распродажа</a>
           </li>
         </ul>
-        <p class="page-header__delivery-info">Бесплатная доставка по всей России</p>
+        <p class="page-header__delivery-info">Бесплатная доставка по России</p>
       </div>
     </header>
     <main class="page-main">
@@ -107,7 +123,7 @@
               <p class="product-order__group-title" for="product-order__additional-info">Доп</p>
               <textarea class="product-order__textarea" name="additional-info" id="product-order__additional-info" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               <p class="product-order__warning">*Поля обязательны для заполнения</p>
-              <button class="product-order__button button" type="submit">Отправить</button>
+              <button class="product-order__button button" type="submit">Отправить заказ</button>
             </div>
           </form>
       </section>
