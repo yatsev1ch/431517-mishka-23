@@ -222,6 +222,8 @@
 }
 
 .page-header__site-navigation-item {
+  box-sizing: border-box;
+
   @media (min-width: @tablet) {
     margin-right: 37px;
     margin-bottom: 25px;
@@ -230,6 +232,7 @@
   @media (min-width: @desktop) {
     margin: 0;
     position: relative;
+    width: 185px;
   }
 
   &:nth-child(2n-1) {
@@ -359,26 +362,23 @@
   &--cart {
     position: absolute;
     left: @mobile-padding;
-    top: 0;
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
     height: 18px;
     width: 21px;
-    margin: auto 0;
   }
 
   &--search {
     position: absolute;
     left: @mobile-padding;
-    top: 0;
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
     height: 18px;
     width: 18px;
-    margin: auto 0;
 
     @media (min-width: @tablet) {
-      left: 0;
-      right: 0;
-      margin: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

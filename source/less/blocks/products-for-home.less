@@ -5,10 +5,14 @@
   flex-direction: column;
   background-image: url("../img/products-for-home/mobile.png");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center -19px;
+  background-size: fill;
+  margin-bottom: 17px;
+
 
   @media (min-width: @tablet) {
     background-image: url("../img/products-for-home/tablet.png");
+    margin-bottom: initial;
   }
 
   @media (min-width: @desktop) {
@@ -37,7 +41,7 @@
 }
 
 .products-for-home__container {
-  min-height: 300px;
+  min-height: 283px;
   padding-top: @pfh-mobile-padding;
 
   @media (min-width: @tablet) {
