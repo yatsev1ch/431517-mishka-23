@@ -9,6 +9,9 @@
   justify-items: center;
 
   @media (min-width: @tablet) {
+    padding-top: 30px;
+    padding-bottom: 35px;
+
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -18,17 +21,120 @@
 
   @media (min-width: @tablet) {
     display: block;
+    justify-self: start;
+  }
+}
+
+.page-footer__logo-image {
+  width: 102px;
+  height: 34px;
+  fill: @black-basic;
+
+  &:hover,
+  &:focus {
+    fill: @mint-link;
+  }
+
+  &:active {
+    fill: @mint-link;
+    opacity: 0.3;
+  }
+}
+
+
+.page-footer__social-links-container {
+  align-self: center;
+  justify-self: stretch;
+  padding-top: 25px;
+  padding-bottom: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid @gray-border-dark;
+
+  @media (min-width: @tablet) {
+    justify-content: flex-start;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 62px;
+  }
+}
+
+.page-footer__social-link {
+  font-size: 0;
+  width: 25px;
+  height: 28px;
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-footer__social-icon {
+  display: block;
+  height: 28px;
+  width: 23px;
+  fill: @black-basic;
+
+  &:hover,
+  &:focus {
+    fill: @mint-link;
+  }
+
+  &:active {
+    fill: @mint-link;
+    opacity: 0.3;
   }
 }
 
 
 .page-footer__credentials {
+  padding-top: 20px;
+  padding-bottom: 25px;
   display: flex;
   align-items: center;
+
+  @media (min-width: @tablet) {
+    justify-self: end;
+  }
 }
 
 .page-footer__credentials-label {
   font-size: 19px;
   line-height: 18px;
   font-weight: 700;
+  margin: 0;
+  margin-right: 28px;
+
+  @media (min-width: @tablet) {
+    margin-right: 27px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 30px;
+  }
+}
+
+.page-footer__credentials-logo-link {
+  display: block;
+}
+
+.page-footer__credentials-logo {
+  width: 27px;
+  height: 34px;
+  display: block;
+  fill: @mint-light;
+
+  &:hover,
+  &:focus {
+    fill: @mint-link;
+  }
+
+  &:active {
+    fill: @mint-link;
+    opacity: 0.3;
+  }
 }

@@ -1,6 +1,16 @@
 .light-link {
   display: block;
-  text-decoration: underline;
-  text-decoration-color: @mint-light;
+  text-decoration: none;
+  border-bottom: 1px solid @mint-link-border;
   color: @black-light;
+
+  &:hover,
+  &:focus {
+    color: @mint-link;
+  }
+
+  &:active {
+    color: @mint-link;
+    border-bottom: 1px solid @mint-link-border--active;
+  }
 }

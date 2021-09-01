@@ -1,60 +1,201 @@
 .products-for-home {
   background-color: @gray-products;
-  min-height: 506px;
+  position: relative;
   display: flex;
   flex-direction: column;
+  background-image: url("../img/products-for-home/mobile.png");
+  background-repeat: no-repeat;
+  background-position: center -19px;
+  background-size: fill;
+  margin-bottom: 17px;
+
+
+  @media (min-width: @tablet) {
+    background-image: url("../img/products-for-home/tablet.png");
+    margin-bottom: initial;
+  }
+
+  @media (min-width: @desktop) {
+    background-image: url("../img/products-for-home/desktop.png");
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    @media (min-width: @tablet) {
+      content: "";
+      position: absolute;
+      background-image: url("../img/wave-pattern-white.svg");
+      background-repeat: repeat;
+      height: 24px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    @media (min-width: @desktop) {
+      height: 34px;
+      background-size: contain;
+    }
+  }
 }
 
 .products-for-home__container {
-  padding-top: 90px;
-  box-sizing: border-box;
-  position: relative;
-  flex-grow: 1;
-}
+  min-height: 283px;
+  padding-top: @pfh-mobile-padding;
 
-.products-for-home__image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
+  @media (min-width: @tablet) {
+    min-height: 627px;
+    padding-top: @pfh-tablet-padding;
+  }
 }
 
 .products-for-home__header {
   font-size: 27px;
-  line-height: 30px;
+  line-height: @h-line-height-mobile;
   font-weight: 700;
   margin: 0;
   text-align: center;
-  z-index: 1;
-  position: relative;
+
+  @media (min-width: @tablet) {
+    font-size: @h-font-size-tablet;
+    line-height: @h-line-height-tablet;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: @h-font-size-desktop;
+    line-height: @h-line-height-desktop;
+  }
 }
 
 .products-for-home__categories-list {
   .reset-margins-n-paddings();
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet) {
     .set-as-container();
+    flex-direction: row;
   }
 }
 
-.products-for-home__category-link {
-  display: block;
-  text-decoration: none;
-  color: @white-basic;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 700;
-  box-sizing: border-box;
+.products-for-home__categories-link-container {
+  flex-basis: 100%;
+
+  &:hover,
+  &:focus {
+    @media (min-width: @tablet) {
+      margin-top: -5px;
+    }
+  }
 
   &--interior {
     background-color: @mint-light;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @mint-light-hover;
+    }
+
+    &:active {
+      background-color: @mint-light-hover;
+    }
   }
 
   &--toys {
     background-color: @mint-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @mint-link;
+    }
   }
+}
+
+
+.products-for-home__category-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: @white-basic;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
+  box-sizing: border-box;
+  .set-as-container();
+  padding-right: @mobile-padding + 60px;
+  padding-top: 24px;
+  padding-bottom: 31px;
 
   @media (min-width: @tablet) {
-    padding: 0;
+    .reset-container();
+    font-size: 20px;
+    line-height: 30px;
+    padding: 25px 94px 45px 35px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 25px 94px 48px 35px;
+  }
+
+  &:hover,
+  &:focus {
+    @media (min-width: @tablet) {
+      padding-bottom: 50px;
+    }
+
+    @media (min-width: @desktop) {
+      padding-bottom: 53px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: @mobile-padding;
+    margin: auto 0;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+    @media (min-width: @tablet) {
+      top: 30px;
+      bottom: initial;
+    }
+  }
+
+  &--interior::before {
+    width: 40px;
+    height: 62px;
+    background-image: url("../img/icons/interior-icon.svg");
+
+    @media (min-width: @tablet) {
+      right: 36px;
+      width: 41px;
+    }
+  }
+
+  &--toys::before {
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icons/toy-icon.svg");
+
+    @media (min-width: @tablet) {
+      right: 34px;
+      width: 61px;
+      height: 61px;
+    }
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 }
