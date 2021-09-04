@@ -97,7 +97,7 @@
           </ul>
           <img class="week-product__image" src="img/vyazannie-korzinki.png" height="315" width="260" alt="Три вязанные корзинки на руках у человека">
           <p class="week-product__price">Цена: 990 руб.</p>
-          <a class="week-product__button button" href="#">Заказать</a>
+          <a class="week-product__button button modal-button" href="#">Заказать</a>
         </div>
       </article>
 
@@ -196,27 +196,30 @@
     </footer>
 
     <!-- Модальное окно -->
-    <section class="add-to-cart modal">
-      <h2 class="add-to-cart__header">Добавить в корзину</h2>
-      <p class="add-to-cart__description">Выберите размер:</p>
-      <form class="add-to-cart__form" action="https://echo.htmlacademy.ru" method="POST">
-        <ul class="add-to-cart__sizes-list">
-          <li class="add-to-cart__sizes-item">
-            <input class="add-to-cart__radio" id="product-size--S" type="radio" name="product-size" value="S" checked>
-            <label for="product-size--S" class="add-to-cart__size-label">S</label>
-          </li>
-          <li class="add-to-cart__sizes-item">
-            <input class="add-to-cart__radio" id="product-size--M" type="radio" name="product-size" value="M">
-            <label for="product-size--M" class="add-to-cart__size-label">M</label>
-          </li>
-          <li class="add-to-cart__sizes-item">
-            <input class="add-to-cart__radio" id="product-size--L" type="radio" name="product-size" value="L">
-            <label for="product-size--L" class="add-to-cart__size-label">L</label>
-          </li>
-        </ul>
-        <button class="add-to-cart__button" type="submit">Добавить</button>
-      </form>
+    <section class="add-to-cart modal-container">
+      <div class="add-to-cart__container modal-container__modal">
+        <h2 class="add-to-cart__header">Добавить в корзину</h2>
+        <p class="add-to-cart__description">Выберите размер:</p>
+        <form class="add-to-cart__form form" action="https://echo.htmlacademy.ru" method="POST">
+          <ul class="add-to-cart__sizes-list">
+            <li class="add-to-cart__sizes-item">
+              <input class="add-to-cart__radio-button visually-hidden" id="product-size--S" type="radio" name="product-size" value="S" checked>
+              <label for="product-size--S" class="add-to-cart__size-label">S</label>
+            </li>
+            <li class="add-to-cart__sizes-item">
+              <input class="add-to-cart__radio-button visually-hidden" id="product-size--M" type="radio" name="product-size" value="M">
+              <label for="product-size--M" class="add-to-cart__size-label">M</label>
+            </li>
+            <li class="add-to-cart__sizes-item">
+              <input class="add-to-cart__radio-button visually-hidden" id="product-size--L" type="radio" name="product-size" value="L">
+              <label for="product-size--L" class="add-to-cart__size-label">L</label>
+            </li>
+          </ul>
+          <button class="add-to-cart__button with-opacity-states" type="submit">Добавить</button>
+        </form>
+      </div>
     </section>
+    <script src="js/modal.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

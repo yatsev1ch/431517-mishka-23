@@ -20,6 +20,30 @@
   grid-template-columns: 1fr;
   padding-bottom: 50px;
 
+
+  @media (min-width: @tablet) {
+    padding-top: 80px;
+    padding-bottom: 131px;
+    margin-bottom: 0;
+
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: @desktop) {
+    @background-width: (@desktop - (2 * @desktop-padding)) / 3;
+    position: relative;
+
+    padding-top: 80px;
+    padding-bottom: 185px;
+
+    background-image: url("../img/reviews-background.jpg");
+    background-position: @desktop-padding 0;
+    background-repeat: no-repeat;
+    background-size: @background-width 457px;
+
+    grid-template-columns: repeat(6, 1fr);
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -28,7 +52,7 @@
     left: 0;
     bottom: 0;
     background-image: url("../img/wave-pattern-gray.svg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 
     @media (min-width: @tablet) {
@@ -40,29 +64,6 @@
       right: @desktop-padding;
       left: @desktop-padding;
     }
-  }
-
-  @media (min-width: @tablet) {
-    padding-top: 79px;
-    padding-bottom: 131px;
-    margin-bottom: 0;
-
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  @media (min-width: @desktop) {
-    @background-width: (@desktop - (2 * @desktop-padding)) / 3;
-    position: relative;
-
-    padding-top: 78px;
-    padding-bottom: 185px;
-
-    background-image: url("../img/reviews-background.jpg");
-    background-position: @desktop-padding 0;
-    background-repeat: no-repeat;
-    background-size: @background-width 457px;
-
-    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -88,7 +89,7 @@
 
     padding-top: 0;
     padding-left: 10px;
-    margin-bottom: 37px;
+    margin-bottom: 35px;
 
     grid-column: ~"2 / 3";
   }
@@ -127,7 +128,7 @@
     margin: 0;
     width: 173px;
     margin-right: 1px;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
 
   @media (min-width: @desktop) {
@@ -192,7 +193,7 @@
   @media (min-width: @desktop) {
     padding-left: 11px;
     padding-right: 70px;
-    margin-bottom: 42px;
+    margin-bottom: 44px;
   }
 }
 
@@ -201,15 +202,17 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 
   @media (min-width: @tablet) {
     font-size: 18px;
+    margin-bottom: 5px;
   }
 
   @media (min-width: @desktop) {
     font-size: 17px;
     padding-left: 11px;
+    margin-bottom: 4px;
   }
 }
 
