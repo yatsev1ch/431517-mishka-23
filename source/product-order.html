@@ -59,7 +59,7 @@
       </div>
     </header>
     <main class="page-main">
-      <div class="inner-header-container">
+      <div class="inner-header-container inner-header-container--product-order">
         <h1 class="inner-header-container__header">Вязание на заказ</h1>
       </div>
       <section class="product-order">
@@ -71,17 +71,17 @@
             <fieldset class="product-order__types">
               <legend class="visually-hidden">Тип</legend>
               <div class="product-order__types-container container">
-                <p class="product-order__group-title" aria-hidden="true">Тип</p>
+                <p class="product-order__group-title product-order__group-title--type" aria-hidden="true">Тип</p>
                 <input class="product-order__radio-button visually-hidden" type="radio" name="type" id="product-order__accessories-type" value="accessories" checked>
-                <label class="product-order__types-label" for="product-order__accessories-type">Аксессуары</label>
+                <label class="product-order__types-label" for="product-order__accessories-type">Аксессуар для интерьера</label>
                 <input class="product-order__radio-button visually-hidden" type="radio" name="type" id="product-order__toys-type" value="toys">
-                <label class="product-order__types-label" for="product-order__toys-type">Игрушки</label>
+                <label class="product-order__types-label" for="product-order__toys-type">Детская игрушка</label>
               </div>
             </fieldset>
             <fieldset class="product-order__colors">
               <legend class="visually-hidden">Цвет</legend>
               <div class="product-order__colors-container container">
-                <p class="product-order__group-title" aria-hidden="true">Цвет</p>
+                <p class="product-order__group-title product-order__group-title--color" aria-hidden="true">Цвет</p>
                 <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__white-color" name="white-color" checked>
                 <label class="product-order__colors-label" for="product-order__white-color">Белый</label>
                 <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__gray-color" name="gray-color" checked>
@@ -94,34 +94,45 @@
                 <label class="product-order__colors-label" for="product-order__pink-color">Розовый</label>
                 <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__orange-color" name="orange-color">
                 <label class="product-order__colors-label" for="product-order__orange-color">Оранжевый</label>
+                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__orange-color" name="orange-color">
               </div>
             </fieldset>
             <div class="product-order__name-info container">
-              <p class="product-order__group-title">ФИО</p>
+              <p class="product-order__group-title product-order__group-title--name">ФИО</p>
               <div class="product-order__name-field-container">
                 <label class="product-order__name-info-label" for="product-order__name-field">Имя:</label>
-                <input class="product-order__name-info-field" type="text" placeholder="Введите ваше имя*" id="product-order__name-field" name="name" required>
+                <input class="product-order__name-info-field product-order__text-input" type="text" placeholder="Введите ваше имя*" id="product-order__name-field" name="name" required>
               </div>
               <div class="product-order__name-field-container">
                 <label class="product-order__name-info-label" for="product-order__last-name-field">Фамилия:</label>
-                <input class="product-order__name-info-field" type="text" placeholder="Укажите фамилию*" id="product-order__last-name-field" name="last-name" required>
+                <input class="product-order__name-info-field product-order__text-input" type="text" placeholder="Укажите фамилию*" id="product-order__last-name-field" name="last-name" required>
               </div>
               <div class="product-order__name-field-container">
                 <label class="product-order__name-info-label" for="product-order__second-name-field">Отчество:</label>
-                <input class="product-order__name-info-field" type="text" placeholder="Отчество, если желаете" id="product-order__second-name-field" name="second-name">
+                <input class="product-order__name-info-field product-order__text-input" type="text" placeholder="Отчество, если желаете" id="product-order__second-name-field" name="second-name">
               </div>
             </div>
             <div class="product-order__contact-info">
               <div class="product-order__contact-info-container container">
-                <label class="product-order__group-title" for="product-order__phone-field">Тел</label>
-                <input class="product-order__contact-info-field" type="tel" pattern="[+][7]\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="product-order__phone-field" name="phone" required>
-                <label class="product-order__group-title" for="product-order__email-field">Email</label>
-                <input class="product-order__contact-info-field" type="email" placeholder="Ваш Email*" id="product-order__email-field" name="email" required>
+                <label class="product-order__group-title product-order__group-title--phone" for="product-order__phone-field">Тел</label>
+                <div class="product-order__contact-field-container product-order__contact-field-container--phone">
+                  <input class="product-order__contact-info-field product-order__contact-info-field--phone product-order__text-input" type="tel" pattern="[+][7]\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="product-order__phone-field" name="phone" required>
+                  <svg class="product-order__field-icon product-order__field-icon--phone">
+                    <use xlink:href="img/sprite.svg#phone-icon"></use>
+                  </svg>
+                </div>
+                <label class="product-order__group-title product-order__group-title--email" for="product-order__email-field">E-mail</label>
+                <div class="product-order__contact-field-container">
+                  <input class="product-order__contact-info-field product-order__contact-info-field--email product-order__text-input" type="email" placeholder="Ваш Email*" id="product-order__email-field" name="email" required>
+                  <svg class="product-order__field-icon product-order__field-icon--email">
+                    <use xlink:href="img/sprite.svg#email-icon"></use>
+                  </svg>
+                </div>
               </div>
             </div>
             <div class="product-order__additional-info container">
-              <p class="product-order__group-title" for="product-order__additional-info">Доп</p>
-              <textarea class="product-order__textarea" name="additional-info" id="product-order__additional-info" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <label class="product-order__group-title product-order__group-title--additional-info" for="product-order__additional-info">Доп</label>
+              <textarea class="product-order__textarea product-order__text-input" name="additional-info" id="product-order__additional-info" cols="30" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               <p class="product-order__warning">*Поля обязательны для заполнения</p>
               <button class="product-order__button button" type="submit">Отправить заказ</button>
             </div>
@@ -131,18 +142,34 @@
     <footer class="page-footer">
       <div class="page-footer__container container">
         <a href="" class="page-footer__logo">
-          <img class="page-footer__logo-image" src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка"  width="102" height="34">
+          <svg class="page-footer__logo-image" width="102" heigh="34">
+            <use xlink:href="img/sprite.svg#footer-logo"></use>
+          </svg>
         </a>
-        <div class="page-footer__socials-container">
-          <a class="page-footer__social-link page-footer__social-link--instagram" href="https://instagram.com">Инстаграм</a>
-          <a class="page-footer__social-link page-footer__social-link--facebook" href="https://facebook.com">Фейсбук</a>
-          <a class="page-footer__social-link page-footer__social-link--twitter" href="https://twitter.com">Твиттер</a>
+        <div class="page-footer__social-links-container">
+          <a class="page-footer__social-link" href="https://instagram.com">
+            <svg class="page-footer__social-icon" width="23" heigh="28">
+              <use xlink:href="img/sprite.svg#instagram-icon"></use>
+            </svg>
+          </a>
+          <a class="page-footer__social-link" href="https://facebook.com">
+            <svg class="page-footer__social-icon" width="23" heigh="28">
+              <use xlink:href="img/sprite.svg#facebook-icon"></use>
+            </svg>
+          </a>
+          <a class="page-footer__social-link" href="https://twitter.com">
+            <svg class="page-footer__social-icon" width="23" heigh="28">
+              <use xlink:href="img/sprite.svg#twitter-icon"></use>
+            </svg>
+          </a>
         </div>
         <div class="page-footer__credentials">
           <p class="page-footer__credentials-label">Разработано</p>
-          <a class="page-footer__credentials-logo-link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="page-footer__credentials-logo-image" src="img/footer-credentials-logo.svg" width="27" height="34" alt="Логотип HTML Академии" >
-          </a>
+            <a class="page-footer__credentials-logo-link" href="https://htmlacademy.ru/intensive/adaptive">
+              <svg class="page-footer__credentials-logo">
+                <use xlink:href="img/sprite.svg#credentials-logo" class="logo"></use>
+              </svg>
+            </a>
         </div>
       </div>
     </footer>

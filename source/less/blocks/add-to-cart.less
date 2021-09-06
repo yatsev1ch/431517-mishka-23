@@ -1,36 +1,134 @@
-.add-to-cart {
-  display: none;
+.add-to-cart__container {
+  z-index: 2;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: @white-basic;
+  width: 320px;
+  box-shadow: @modal-shadow;
+  border-top: 1px solid @gray-border-modal;
+  border-bottom: 1px solid @gray-border-modal;
+
+  padding: 28px 30px 47px 30px;
+
+  @media (min-width: @tablet) {
+    width: 568px;
+    padding: 37px 92px 45px 92px;
+    border-left: 1px solid @gray-border-modal;
+    border-right: 1px solid @gray-border-modal;
+  }
+}
+
+.add-to-cart__form {
+  box-sizing: border-box;
+  display: block;
+
+  @media (min-width: @tablet) {
+    padding: 0 16px;
+  }
 }
 
 .add-to-cart__header {
+  margin: 0 0 15px 0;
+  padding: 0 55px;
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+    margin: 0 0 12px 0;
+    font-size: 30px;
+    line-height: 57px;
+  }
 }
 
 .add-to-cart__description {
   font-size: 15px;
   line-height: 30px;
   color: @black-light;
+  text-align: center;
+  margin: 0 0 22px 0;
+
+  @media (min-width: @tablet) {
+    font-size: 17px;
+    margin: 0 0 19px 0;
+  }
 }
 
 .add-to-cart__sizes-list {
   .reset-margins-n-paddings();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+.add-to-cart__sizes-item {
+  margin-bottom: 11px;
+  margin-right: 7px;
+
+  &:nth-child(3n+3) {
+    margin-right: 0;
+  }
+
+  @media (min-width: @tablet) {
+    margin-bottom: 12px;
+  }
 }
 
 .add-to-cart__size-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  flex-shrink: 0;
   font-size: 17px;
   line-height: 16px;
   color: @black-light;
   font-weight: 700;
+  width: 82px;
+  height: 52px;
+  border: 2px solid @black-light-transparent-10;
+
+  &:hover,
+  &:focus {
+    border-color: @black-light-transparent-30;
+  }
+
+  &:active {
+    border-color: @mint-link-border;
+  }
+
+  @media (min-width: @tablet) {
+    width: 112px;
+  }
+}
+
+.add-to-cart__radio-button {
+  &:checked + .add-to-cart__size-label {
+    border-color: @mint-link-border;
+  }
 }
 
 .add-to-cart__button {
+  display: block;
+  box-sizing: border-box;
+  text-transform: uppercase;
   background-color: @mint-light;
   border: none;
   color: @white-basic;
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
+  padding: 17px 0 17px 0;
+  width: 100%;
+
+  @media (min-width: @tablet) {
+    padding: 18px 0;
+  }
 }

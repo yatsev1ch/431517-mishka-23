@@ -71,6 +71,7 @@
 
 .page-header__logo-image {
   display: block;
+  position: relative;
   width: 86px;
   height: 35px;
 
@@ -308,7 +309,7 @@
       color: transparent;
       position: relative;
       min-height: @header-tablet-height;
-      width: 85px;
+      width: 83px;
       border-left: 1px solid @black-transparent-10;
       border-right: 1px solid @black-transparent-10;
     }
@@ -324,12 +325,13 @@
 
     @media (min-width: @tablet) {
       padding: 33px 0 31px 83px;
-      min-width: 265px;
+      min-width: 264px;
     }
 
     @media (min-width: @desktop) {
-      padding: 33px 0 31px 85px;
-      max-width: 267px;
+      min-width: 266px;
+      padding-top: 34px;
+      padding-bottom: 30px;
     }
   }
 
@@ -366,6 +368,10 @@
     transform: translateY(-50%);
     height: 18px;
     width: 21px;
+
+    @media (min-width: @desktop) {
+      left: 31px;
+    }
   }
 
   &--search {
@@ -474,8 +480,6 @@
 
   @media (min-width: @desktop) {
     height: @pfh-desktop-padding;
-    padding-top: 21px;
-
     grid-column: ~"3 / 4";
   }
 }

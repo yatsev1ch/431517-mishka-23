@@ -1,0 +1,22 @@
+.modal-container {
+  display: none;
+
+  &--opened {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: @white-transparent-90;
+  }
+}
+
+.modal-container__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

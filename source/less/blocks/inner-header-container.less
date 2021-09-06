@@ -1,18 +1,60 @@
 .inner-header-container {
   background-color: @gray-basic;
+  position: relative;
   min-height: 177px;
   box-sizing: border-box;
-  padding-bottom: 10px;
-  display: flex;
-  align-items: flex-start;
+  padding-top: 74px;
 
   @media (min-width: @tablet) {
-    padding-top: 100px;
+    padding-top: 102px;
     min-height: 238px;
   }
 
   @media (min-width: @desktop) {
     min-height: 272px;
+  }
+
+  &--product-order {
+    margin-bottom: 17px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 55px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-bottom: 99px;
+    }
+  }
+
+  &--catalog {
+    margin-bottom: 30px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 67px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-bottom: 111px;
+    }
+  }
+
+  &::before {
+    @media (min-width: @tablet) {
+      content: "";
+      position: absolute;
+      background-image: url("../img/wave-pattern-white.svg");
+      background-repeat: repeat;
+      background-size: cover;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 24px;
+      z-index: 1;
+    }
+
+    @media (min-width: @desktop) {
+      height: 34px;
+    }
   }
 }
 
@@ -22,15 +64,18 @@
   font-weight: 700;
   text-align: center;
 
-  margin: auto;
+  margin: 0 auto;
   max-width: @mobile - (2 * @mobile-padding);
 
   @media (min-width: @tablet) {
     max-width: @tablet - 2 * @tablet-padding;
-    margin: 0 auto auto auto;
+    font-size: @h-font-size-tablet;
+    line-height: @h-line-height-tablet;
   }
 
   @media (min-width: @desktop) {
     max-width: @desktop - 2 * @desktop-padding;
+    font-size: @h-font-size-desktop;
+    line-height: @h-line-height-desktop;
   }
 }
