@@ -1,6 +1,4 @@
-{ "start_url": "/",
-
-  "icons": [
+{ "icons": [
       {
           "src": "img/favicons/192x192.png",
           "sizes": "192x192",
