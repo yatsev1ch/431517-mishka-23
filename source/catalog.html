@@ -148,6 +148,9 @@
           </div>
           <div class="about-production__video-container">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/about-production-desktop.webp 1x, img/about-production-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/about-production-tablet.webp 1x, img/about-production-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/about-production-mobile.webp 1x, img/about-production-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/about-production-desktop.png 1x, img/about-production-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/about-production-tablet.png 1x, img/about-production-tablet@2x.png 2x">
               <img class="about-production__video-thumbnail" src="img/about-production-mobile.png" srcset="img/about-production-mobile@2x.png 2x" width="668" height="445" alt="Видео о производстве продукции">
@@ -184,7 +187,7 @@
         <div class="page-footer__credentials">
           <p class="page-footer__credentials-label">Разработано</p>
             <a class="page-footer__credentials-logo-link" href="https://htmlacademy.ru/intensive/adaptive">
-              <svg class="page-footer__credentials-logo">
+              <svg class="page-footer__credentials-logo" width="27" height="34">
                 <use xlink:href="img/sprite.svg#credentials-logo" class="logo"></use>
               </svg>
             </a>
