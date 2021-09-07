@@ -2,11 +2,16 @@
   position: relative;
 
   @media (min-width: @tablet) {
-    background-image: url("../img/reviews-background.jpg");
+    background-image: url("../img/reviews-background.png");
     background-repeat: no-repeat;
     background-size: 350px 457px;
     box-sizing: border-box;
     padding-bottom: 5px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/reviews-background@2x.png");
+      background-size: 350px 457px;
+    }
   }
 
   @media (min-width: @desktop) {
@@ -36,10 +41,15 @@
     padding-top: 80px;
     padding-bottom: 185px;
 
-    background-image: url("../img/reviews-background.jpg");
+    background-image: url("../img/reviews-background.png");
     background-position: @desktop-padding 0;
     background-repeat: no-repeat;
     background-size: @background-width 457px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/reviews-background@2x.png");
+      // background-size: @background-width 457px;
+    }
 
     grid-template-columns: repeat(6, 1fr);
   }

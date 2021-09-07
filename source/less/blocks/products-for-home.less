@@ -3,23 +3,37 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-image: url("../img/products-for-home/mobile.png");
+  background-image: url("../img/pfh-mobile.png");
   background-repeat: no-repeat;
   background-position: center -19px;
-  background-size: fill;
   margin-bottom: 17px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/pfh-mobile@2x.png");
+    background-size: 569px auto;
+  }
 
 
   @media (min-width: @tablet) {
-    background-image: url("../img/products-for-home/tablet.png");
+    background-image: url("../img/pfh-tablet.png");
     margin-bottom: initial;
     background-position: center -2px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pfh-tablet@2x.png");
+      background-size: 1151px auto;
+    }
   }
 
   @media (min-width: @desktop) {
-    background-image: url("../img/products-for-home/desktop.png");
+    background-image: url("../img/pfh-desktop.png");
     margin-bottom: 20px;
     background-position: center -3px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pfh-desktop@2x.png");
+      background-size: 1151px auto;
+    }
   }
 
   &::before {
