@@ -233,13 +233,25 @@
 
     grid-row: ~"2 / 6";
     grid-column: ~"3 / 5";
-    width: 100%;
+    min-width: 100%;
     height: auto;
   }
 
   @media (min-width: @desktop) {
     padding-top: 0;
 
+    grid-row: ~"1 / 6";
+    grid-column: ~"4 / 7";
+  }
+}
+
+.week-product__image-container {
+  @media (min-width: @tablet) {
+    grid-row: ~"2 / 6";
+    grid-column: ~"3 / 5";
+  }
+
+  @media (min-width: @desktop) {
     grid-row: ~"1 / 6";
     grid-column: ~"4 / 7";
   }
