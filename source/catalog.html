@@ -7,16 +7,16 @@
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="img/favicons/180x180.png">
     <link rel="manifest" crossorigin="use-credentials" href="favicons.webmanifest">
-    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="true">
-    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="true">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__container">
         <div class="page-header__logo-container">
-          <a href="index.html" class="page-header__logo-link">
-            <svg class="page-header__logo-image with-opacity-states" width="86" height="35">
+          <a href="index.html" class="page-header__logo-link with-opacity-states">
+            <svg class="page-header__logo-image" width="86" height="35">
               <use class="page-header__logo-image--minimal" xlink:href="img/sprite.svg#minimal-logo"></use>
               <use class="page-header__logo-image--medium" xlink:href="img/sprite.svg#medium-logo"></use>
               <use class="page-header__logo-image--large" xlink:href="img/sprite.svg#large-logo"></use>
@@ -214,16 +214,16 @@
         <form class="add-to-cart__form form" action="https://echo.htmlacademy.ru" method="POST">
           <ul class="add-to-cart__sizes-list">
             <li class="add-to-cart__sizes-item">
-              <input class="add-to-cart__radio-button visually-hidden" id="product-size--S" type="radio" name="product-size" value="S" checked>
-              <label for="product-size--S" class="add-to-cart__size-label">S</label>
+              <input class="add-to-cart__radio-button visually-hidden" id="product-size--S" type="radio" name="product-size" value="S" tabindex="-1" checked>
+              <label for="product-size--S" class="add-to-cart__size-label" tabindex="0">S</label>
             </li>
             <li class="add-to-cart__sizes-item">
-              <input class="add-to-cart__radio-button visually-hidden" id="product-size--M" type="radio" name="product-size" value="M">
-              <label for="product-size--M" class="add-to-cart__size-label">M</label>
+              <input class="add-to-cart__radio-button visually-hidden" id="product-size--M" type="radio" name="product-size" value="M" tabindex="-1">
+              <label for="product-size--M" class="add-to-cart__size-label" tabindex="0">M</label>
             </li>
             <li class="add-to-cart__sizes-item">
-              <input class="add-to-cart__radio-button visually-hidden" id="product-size--L" type="radio" name="product-size" value="L">
-              <label for="product-size--L" class="add-to-cart__size-label">L</label>
+              <input class="add-to-cart__radio-button visually-hidden" id="product-size--L" type="radio" name="product-size" value="L" tabindex="-1">
+              <label for="product-size--L" class="add-to-cart__size-label" tabindex="0">L</label>
             </li>
           </ul>
           <button class="add-to-cart__button with-opacity-states" type="submit">Добавить</button>
