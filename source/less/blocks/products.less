@@ -52,7 +52,7 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus-within {
     box-shadow: @product-shadow-hover;
   }
 
@@ -134,6 +134,8 @@
   text-decoration: none;
   color: @black-basic;
   vertical-align: baseline;
+  outline: none;
+
 
   margin: 0;
 
@@ -173,13 +175,7 @@
   width: 20px;
   height: 19px;
   justify-self: flex-end;
-
-  // @media (min-width: @desktop) {
-  //   margin-right: 4px;
-  // }
-}
-
-.products__cart-button-icon {
+  outline: none;
   opacity: 0.2;
 
   &:hover,
