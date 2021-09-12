@@ -7,16 +7,16 @@
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="img/favicons/180x180.png">
     <link rel="manifest" crossorigin="use-credentials" href="favicons.webmanifest">
-    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="true">
-    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="true">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__container">
         <div class="page-header__logo-container">
-          <a href="index.html" class="page-header__logo-link">
-            <svg class="page-header__logo-image with-opacity-states" width="86" height="35">
+          <a href="index.html" class="page-header__logo-link with-opacity-states">
+            <svg class="page-header__logo-image" width="86" height="35">
               <use class="page-header__logo-image--minimal" xlink:href="img/sprite.svg#minimal-logo"></use>
               <use class="page-header__logo-image--medium" xlink:href="img/sprite.svg#medium-logo"></use>
               <use class="page-header__logo-image--large" xlink:href="img/sprite.svg#large-logo"></use>
@@ -77,29 +77,28 @@
               <legend class="visually-hidden">Тип</legend>
               <div class="product-order__types-container container">
                 <p class="product-order__group-title product-order__group-title--type" aria-hidden="true">Тип</p>
-                <input class="product-order__radio-button visually-hidden" type="radio" name="type" id="product-order__accessories-type" value="accessories" checked>
-                <label class="product-order__types-label" for="product-order__accessories-type">Аксессуар для интерьера</label>
-                <input class="product-order__radio-button visually-hidden" type="radio" name="type" id="product-order__toys-type" value="toys">
-                <label class="product-order__types-label" for="product-order__toys-type">Детская игрушка</label>
+                <input class="product-order__radio-button visually-hidden" type="radio" name="type" id="product-order__accessories-type" value="accessories" tabindex="-1" checked>
+                <label class="product-order__types-label" for="product-order__accessories-type" tabindex="0">Аксессуар для интерьера</label>
+                <input class="product-order__radio-button visually-hidden" type="radio" name="type" id="product-order__toys-type" value="toys" tabindex="-1">
+                <label class="product-order__types-label" for="product-order__toys-type" tabindex="0">Детская игрушка</label>
               </div>
             </fieldset>
             <fieldset class="product-order__colors">
               <legend class="visually-hidden">Цвет</legend>
               <div class="product-order__colors-container container">
                 <p class="product-order__group-title product-order__group-title--color" aria-hidden="true">Цвет</p>
-                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__white-color" name="white-color" checked>
-                <label class="product-order__colors-label" for="product-order__white-color">Белый</label>
-                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__gray-color" name="gray-color" checked>
-                <label class="product-order__colors-label" for="product-order__gray-color">Серый</label>
-                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__tiffany-color" name="tiffany-color">
-                <label class="product-order__colors-label" for="product-order__tiffany-color">«Тиффани»</label>
-                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__black-color" name="black-color">
-                <label class="product-order__colors-label" for="product-order__black-color">Чёрный</label>
-                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__pink-color" name="pink-color">
-                <label class="product-order__colors-label" for="product-order__pink-color">Розовый</label>
-                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__orange-color" name="orange-color">
-                <label class="product-order__colors-label" for="product-order__orange-color">Оранжевый</label>
-                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__orange-color" name="orange-color">
+                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__white-color" name="white-color" tabindex="-1" checked>
+                <label class="product-order__colors-label" for="product-order__white-color" tabindex="0">Белый</label>
+                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__gray-color" name="gray-color" tabindex="-1" checked>
+                <label class="product-order__colors-label" for="product-order__gray-color" tabindex="0">Серый</label>
+                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__tiffany-color" name="tiffany-color" tabindex="-1">
+                <label class="product-order__colors-label" for="product-order__tiffany-color" tabindex="0">«Тиффани»</label>
+                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__black-color" name="black-color" tabindex="-1">
+                <label class="product-order__colors-label" for="product-order__black-color" tabindex="0">Чёрный</label>
+                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__pink-color" name="pink-color" tabindex="-1">
+                <label class="product-order__colors-label" for="product-order__pink-color" tabindex="0">Розовый</label>
+                <input class="product-order__checkbox visually-hidden" type="checkbox" id="product-order__orange-color" name="orange-color" tabindex="-1">
+                <label class="product-order__colors-label" for="product-order__orange-color" tabindex="0">Оранжевый</label>
               </div>
             </fieldset>
             <div class="product-order__name-info container">
