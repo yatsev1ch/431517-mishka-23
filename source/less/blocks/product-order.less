@@ -301,6 +301,14 @@
   &:checked + .product-order__types-label::after {
     display: block;
   }
+
+  &:disabled + .product-order__types-label::after {
+    background-color: @black-light-transparent-10;
+  }
+
+  &:disabled + .product-order__types-label::before {
+    border-color: @black-light-transparent-10;
+  }
 }
 
 .product-order__colors {
@@ -430,6 +438,14 @@
 .product-order__checkbox {
   &:checked + .product-order__colors-label::after {
     display: block;
+  }
+
+  &:disabled + .product-order__colors-label::before {
+    border-color: @black-light-transparent-10;
+  }
+
+  &:disabled + .product-order__colors-label::after {
+    opacity: 0.1;
   }
 }
 
